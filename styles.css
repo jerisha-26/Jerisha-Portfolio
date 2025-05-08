@@ -13,6 +13,21 @@ body {
   .container {
     max-width: 700px;
     padding: 30px 20px;
+    @media (max-width: 768px) {
+    .header-container {
+      margin-top: 20px; /* or adjust as needed */
+      text-align: center;
+    }
+  
+    h1 {
+      font-size: 1.8rem; /* Reduce size for small screens */
+    }
+  
+    .profile-pic {
+      margin-top: 10px;
+      width: 120px; /* adjust for responsiveness */
+    }
+  }
   }
   
   .title {
@@ -42,21 +57,7 @@ body {
 
 
 
-@media (max-width: 768px) {
-    .header-container {
-      margin-top: 20px; /* or adjust as needed */
-      text-align: center;
-    }
-  
-    h1 {
-      font-size: 1.8rem; /* Reduce size for small screens */
-    }
-  
-    .profile-pic {
-      margin-top: 10px;
-      width: 120px; /* adjust for responsiveness */
-    }
-  }
+
   
   h2 {
     font-size: 1.8rem;
