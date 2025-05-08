@@ -7,7 +7,7 @@
   
   body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(95deg, #a18cd1, #c30c8f,#cb65ae);
+    background: linear-gradient(90deg ,#a18cd1, #e059ba,#cb65ae);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
