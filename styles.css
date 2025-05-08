@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to right, #3b3b98, #b33771);
+    background: linear-gradient(90deg ,#a18cd1, #e059ba,#cb65ae);
     color: white;
     text-align: center;
     min-height: 100vh;
@@ -51,6 +51,13 @@ body {
     margin-bottom: 30px;
   }
   
+
+  .highlight {
+    color: #14d3e0; /* Red */
+    font-weight: bold;
+  }
+  
+    
   .buttons {
     display: flex;
     justify-content: center;
