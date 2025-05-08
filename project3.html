@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jerisha Portfolio</title>
+<link rel="stylesheet" href="project3.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="project-detail">
+    <h1>Auto Light Controller</h1>
+  
+    <h2>Overview</h2>
+    <p>This project uses an LDR to detect ambient light and automatically turns lights ON at night and OFF during the day using a relay or LED.</p>
+  
+    <h2>Circuit Diagram</h2>
+    <img src="c.png" alt="Auto Light Controller">
+  
+    <h2>Arduino Code</h2>
+    <div class="code-block">
+      <pre>
+        const int LDR_PIN = A0; // LDR connected to Analog Pin A0
+        const int LIGHT_PIN = 9; // Relay Module or LED connected to Pin 9
+        int threshold = 500; // Adjust this based on your lighting conditions
+        
+        void setup() {
+          pinMode(LIGHT_PIN, OUTPUT);
+          Serial.begin(9600); // Initialize Serial Monitor
+        }
+        
+        void loop() {
+          int ldrValue = analogRead(LDR_PIN); // Read LDR sensor value
+          Serial.print("LDR Value: ");
+          Serial.println(ldrValue); // Print to Serial Monitor
+        
+          if (ldrValue < threshold) {
+            digitalWrite(LIGHT_PIN, HIGH); // Turn ON lights (Night)
+            Serial.println("Lights ON");
+          } else {
+            digitalWrite(LIGHT_PIN, LOW); // Turn OFF lights (Daytime)
+            Serial.println("Lights OFF");
+          }
+        
+          delay(500); // Small delay for stability
+        }
+      </pre>
+    </div>
+  </div>
+  
